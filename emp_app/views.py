@@ -2,6 +2,7 @@ from django.shortcuts import render,redirect,HttpResponse
 from .models import Department,Role,Employee
 from datetime import datetime
 from django.db.models import Q
+
 # Create your views here.
 def index(request):
     
@@ -14,7 +15,6 @@ def View_all_employee(request):
     }
     print(context)
     return render(request,"View_all_employee.html",context)
-
 
 def Remove_an_employee(request,emp_id = 0):
     if emp_id:
