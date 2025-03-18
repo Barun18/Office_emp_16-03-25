@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Filter_employee</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+</head>
+<body>
+   <center>  <div class="heading"><h1>Filter Employee</h1></center>
+        <hr>
+       
+        <center>
+            <form action="/Filter_employee" method="POST">
+                 {% csrf_token %}
+                <div class="mb-3">
+                  <label for="first_name">First Name/Last Name</label><br>
+                  <input type="text" id="first_name"name="first_name" value="{{ first_name}}"> <br>
+                  
+                  <label for="dept">Department</label><br>
+                  <input type="text"  id="dept"name="dept" value="{{ dept }}"><br>
+    
+                  <label for="role">Role</label><br>
+                  <input type="text" id="role"name="role" value="{{ role }}"><br>
+    
+                  <div class="form-check">
+                    <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                    <label class="form-check-label" for="exampleCheck1"><center> Check me out </center></label>
+                  </div>
+                  <button type="submit" class="btn btn-primary">Submit</button>
+                
+              </form>
+            </center>
+       
+        </div> 
+            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</body>
+</html>
